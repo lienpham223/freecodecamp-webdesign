@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Form</title>
+   
+    <style>
+        html {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            font-weight: 400;
+            background: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        body {
+            width: 100%;
+
+            
+
+            color: white;
+        }
+
+        form {
+            background-color: #252644;
+            border-radius: 0.25rem;
+            margin-left: 23%;
+            margin-right: 23%;
+            text-align: left;
+            padding: 3%;
+            font-size: 1.125rem;
+            
+        }
+
+        ::placeholder {
+            font-size: 1rem;
+            padding-left: 0.5rem;
+        }
+
+
+        .box {
+            width: 100%;
+            height: 2.75rem;
+            padding-left: 0.5rem;
+            display: block;
+            border: solid;
+            border-radius: 0.25rem;
+            font-size: 1.125rem;
+            box-sizing: border-box;
+        }
+
+        #dropdown {
+            width: 100%;
+        }
+
+
+        textarea {
+            width: 100%;
+            display: block;
+            font-size: 1.125rem;
+        
+        }
+
+        #submit {
+            width: 100%;
+            height: 1cm;
+            color: white;
+            background-color: #36AF65;
+            font-size: 1.12rem;
+            box-sizing: border-box;
+
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <h1 id="title"><b>freeCodeCamp Survey Form</b></h1>
+        <p id="description"><em>Thank you for taking the time to help us improve the platform</em></p>
+    </header>
+
+    <main>
+        <form id="survey-form">
+            
+            <div class="group">
+                <label id="name-label">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required class="box"><br>
+            </div>
+
+            <div class="group">
+                <label id="email-label">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your Email" required class="box"><br>
+            </div>
+
+            <div class="group">
+                <label id="number-label">Age (optional)</label>
+                <input type="number" id="number" name="age" placeholder="Age" min="10" max="99" class="box"></br>
+            </div>
+                
+            <div class="group">
+                <p>Which option best describes your current role?</p>
+                <select name="role" id="dropdown" class="box">
+                    <option value="" disabled selected>Select current role</option>
+                    <option value="student">Student</option>
+                    <option value="full time job">Full Time Job</option>
+                    <option value="full time learner">Full Time Learner</option>
+                    <option value="prefer not to say">Prefer not to say</option>
+                    <option value="option">Other</option>
+                </select></br>
+            </div>
+
+            <div class="group">
+                <p>Would you recommend freeCodeCamp to a friend?</p>
+                <input id="definitely" type="radio" name="recommend" value="definitely">
+                <label for="definitely">Definitely</label><br>
+
+                <input id="maybe" type="radio" name="recommend" value="maybe">
+                <label for="maybe">Maybe</label><br>
+
+                <input id="not sure" type="radio" name="recommend" value="not sure">
+                <label for="not sure">Not sure</label><br>
+            </div>
+
+        
+            <div class="group">
+                <p>What is your favourite feature of freeCodeCamp?</p>
+                <select name="favourite feature" id="dropdown" class="box">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="challenges">Challenges</option>
+                    <option value="projects">Projects</option>
+                    <option value="community">Community</option>
+                    <option value="open source">Open Source</option>
+                </select><br>
+            </div>
+
+            <div class="group" class="improve">
+                <p>What would you like to see improved? (Check all that apply)</p>    
+                <input id="improve" type="checkbox" value="frontend projects">Front-end Projects<br>
+                <input id="improve" type="checkbox" value="backend projects">Back-end Projects<br>
+                <input id="improve" type="checkbox" value="data visualization">Data Visualization<br>
+                <input id="improve" type="checkbox" value="challenges">Challenges<br>
+                <input id="improve" type="checkbox" value="open source community">Open Source Community<br>
+                <input id="improve" type="checkbox" value="gitter help rooms">Gitter help rooms<br>
+                <input id="improve" type="checkbox" value="videos">Videos<br>       
+                <input id="improve" type="checkbox" value="city meetups">City Meetups<br>
+                <input id="improve" type="checkbox" value="wiki">Wiki<br>
+                <input id="improve" type="checkbox" value="forum">Forum<br>
+                <input id="improve" type="checkbox" value="additional courses">Additional Courses<br>
+            </div>
+
+            <div class="group">
+                <p>Any comments or suggestions?</p>
+                <textarea rows="4" cols="50" placeholder="Enter your comments here..."></textarea><br>
+            </div>
+            
+            <div class="group">
+                <input type="submit" name="submit" value="Submit" id="submit">
+            </div>
+        </form>
+        
+    </main>
+        
+</body>
+</html>
+
+
